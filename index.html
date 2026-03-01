@@ -13,18 +13,18 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-            background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100px);
-            color: #2c3e50;
+            background: linear-gradient(to bottom, #faf6f0 0%, #ffffff 100px);
+            color: #3d3228;
             padding-bottom: 120px;
         }
 
         /* ヘッダー */
         .page-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #c4a87c 0%, #8b6f47 100%);
             color: white;
             padding: 24px 20px;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(139,111,71,0.2);
         }
 
         .page-header h1 {
@@ -43,8 +43,8 @@
             display: flex;
             position: sticky;
             top: 0;
-            background: white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            background: #fffcf7;
+            box-shadow: 0 2px 8px rgba(139,111,71,0.1);
             z-index: 100;
         }
 
@@ -57,7 +57,7 @@
             transition: all 0.3s;
             font-size: 15px;
             font-weight: 600;
-            color: #666;
+            color: #8b7b6b;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -65,13 +65,13 @@
         }
 
         .tab:hover {
-            background: #f8f9fa;
+            background: #f5ede3;
         }
 
         .tab.active {
-            color: #667eea;
-            border-bottom: 2px solid #667eea;
-            background: #f8f9ff;
+            color: #8b6f47;
+            border-bottom: 2px solid #c4a87c;
+            background: #faf3ea;
         }
 
         .tab-icon {
@@ -102,24 +102,24 @@
         }
 
         .section.critical-section {
-            background: linear-gradient(to right, #ffebee, #ffffff);
+            background: linear-gradient(to right, #f9eeea, #fffcf7);
             padding: 24px;
             border-radius: 12px;
-            border-left: 4px solid #e53e3e;
+            border-left: 4px solid #b5654a;
         }
 
         .section.recommended-section {
-            background: linear-gradient(to right, #e3f2fd, #ffffff);
+            background: linear-gradient(to right, #f5ede3, #fffcf7);
             padding: 24px;
             border-radius: 12px;
-            border-left: 4px solid #2196f3;
+            border-left: 4px solid #c4a87c;
         }
 
         .section.optional-section {
-            background: linear-gradient(to right, #f1fdf7, #ffffff);
+            background: linear-gradient(to right, #f0efe8, #fffcf7);
             padding: 24px;
             border-radius: 12px;
-            border-left: 4px solid #38a169;
+            border-left: 4px solid #8a9a6d;
         }
 
         .section-title {
@@ -138,43 +138,43 @@
             content: '';
             flex: 1;
             height: 1px;
-            background: linear-gradient(to right, transparent, #ddd, transparent);
+            background: linear-gradient(to right, transparent, #d4c4b0, transparent);
         }
 
-        .section-title.critical { color: #e53e3e; }
-        .section-title.recommended { color: #dd6b20; }
-        .section-title.optional { color: #38a169; }
+        .section-title.critical { color: #b5654a; }
+        .section-title.recommended { color: #a0845c; }
+        .section-title.optional { color: #8a9a6d; }
 
         /* アイテムカード */
         .item-card {
-            background: white;
+            background: #fffcf7;
             border-radius: 12px;
             margin-bottom: 24px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            box-shadow: 0 4px 12px rgba(139,111,71,0.08);
             overflow: hidden;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #e8ddd0;
             transition: all 0.3s;
         }
 
         .item-card:hover {
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 20px rgba(139,111,71,0.15);
         }
 
         .item-title {
             font-size: 17px;
             font-weight: 700;
-            color: #2d3748;
+            color: #3d3228;
             line-height: 1.4;
             text-align: center;
             padding: 20px 20px 16px 20px;
-            border-bottom: 2px solid #e2e8f0;
+            border-bottom: 2px solid #e8ddd0;
         }
 
         .item-details {
             padding: 20px;
             font-size: 15px;
             line-height: 1.8;
-            color: #4a5568;
+            color: #5c4f42;
         }
 
         .item-details ul {
@@ -188,29 +188,29 @@
         }
 
         .item-details strong {
-            color: #2d3748;
+            color: #3d3228;
             font-weight: 600;
         }
 
         .item-details a {
-            color: #667eea;
+            color: #8b6f47;
             text-decoration: none;
-            border-bottom: 1px solid #667eea;
+            border-bottom: 1px solid #c4a87c;
         }
 
         .item-details a:hover {
-            color: #764ba2;
-            border-bottom-color: #764ba2;
+            color: #6b5535;
+            border-bottom-color: #8b6f47;
         }
 
         /* HAKKI AFRICAセクション */
         .hakki-section {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #8b6f47 0%, #6b5535 100%);
             color: white;
             padding: 32px 24px;
             border-radius: 16px;
             margin: 48px 0;
-            box-shadow: 0 8px 24px rgba(245,87,108,0.3);
+            box-shadow: 0 8px 24px rgba(107,85,53,0.3);
         }
 
         .hakki-section h2 {
@@ -220,13 +220,13 @@
         }
 
         .hakki-section .item-card {
-            background: rgba(255,255,255,0.95);
+            background: rgba(255,252,247,0.97);
         }
 
         /* チェックリスト */
         .checklist {
-            background: #f7fafc;
-            border: 2px solid #e2e8f0;
+            background: #faf6f0;
+            border: 2px solid #e8ddd0;
             border-radius: 12px;
             padding: 24px;
             margin-top: 32px;
@@ -236,12 +236,12 @@
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 20px;
-            color: #2d3748;
+            color: #3d3228;
         }
 
         .checklist-item {
             padding: 12px 0;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e8ddd0;
             font-size: 15px;
             line-height: 1.6;
         }
@@ -253,7 +253,7 @@
         /* チェックボックス付きアイテム */
         .checkbox-item {
             padding: 12px 0;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e8ddd0;
             font-size: 15px;
             line-height: 1.6;
             display: flex;
@@ -505,11 +505,11 @@
 
     <!-- ドバイ -->
     <div class="content" id="dubai">
-        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 32px; color: #2d3748;">🇦🇪 ドバイ</h2>
+        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 32px; color: #3d3228;">🇦🇪 ドバイ</h2>
         
         <!-- 在国中 -->
-        <div style="border-top: 3px solid #667eea; padding-top: 32px; margin-top: 16px; margin-bottom: 32px;">
-            <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 24px; color: #667eea; text-align: center; background: linear-gradient(to right, transparent, #f0f4ff, transparent); padding: 12px 0;">📍 在国中</h3>
+        <div style="border-top: 3px solid #c4a87c; padding-top: 32px; margin-top: 16px; margin-bottom: 32px;">
+            <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 24px; color: #8b6f47; text-align: center; background: linear-gradient(to right, transparent, #f5ede3, transparent); padding: 12px 0;">📍 在国中</h3>
         </div>
         
         <div class="section critical-section">
@@ -629,8 +629,8 @@
         </div>
 
         <!-- 出国前 -->
-        <div style="border-top: 3px solid #f56565; border-bottom: 3px solid #f56565; padding: 32px 0; margin: 64px 0 32px 0;">
-            <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 24px; color: #f56565; text-align: center; background: linear-gradient(to right, transparent, #fff5f5, transparent); padding: 12px 0;">✈️ 出国前</h3>
+        <div style="border-top: 3px solid #b5654a; border-bottom: 3px solid #b5654a; padding: 32px 0; margin: 64px 0 32px 0;">
+            <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 24px; color: #b5654a; text-align: center; background: linear-gradient(to right, transparent, #f9eeea, transparent); padding: 12px 0;">✈️ 出国前</h3>
         </div>
         
         <div class="section critical-section">
@@ -694,11 +694,11 @@
 
     <!-- ケニア -->
     <div class="content" id="kenya">
-        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 32px; color: #2d3748;">🇰🇪 ケニア</h2>
+        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 32px; color: #3d3228;">🇰🇪 ケニア</h2>
         
         <!-- 在国中 -->
-        <div style="border-top: 3px solid #667eea; padding-top: 32px; margin-top: 16px; margin-bottom: 32px;">
-            <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 24px; color: #667eea; text-align: center; background: linear-gradient(to right, transparent, #f0f4ff, transparent); padding: 12px 0;">📍 在国中</h3>
+        <div style="border-top: 3px solid #c4a87c; padding-top: 32px; margin-top: 16px; margin-bottom: 32px;">
+            <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 24px; color: #8b6f47; text-align: center; background: linear-gradient(to right, transparent, #f5ede3, transparent); padding: 12px 0;">📍 在国中</h3>
         </div>
         
         <div class="section critical-section">
@@ -811,8 +811,8 @@
         </div>
 
         <!-- 出国前 -->
-        <div style="border-top: 3px solid #f56565; border-bottom: 3px solid #f56565; padding: 32px 0; margin: 64px 0 32px 0;">
-            <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 24px; color: #f56565; text-align: center; background: linear-gradient(to right, transparent, #fff5f5, transparent); padding: 12px 0;">✈️ 出国前</h3>
+        <div style="border-top: 3px solid #b5654a; border-bottom: 3px solid #b5654a; padding: 32px 0; margin: 64px 0 32px 0;">
+            <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 24px; color: #b5654a; text-align: center; background: linear-gradient(to right, transparent, #f9eeea, transparent); padding: 12px 0;">✈️ 出国前</h3>
         </div>
         
         <div class="section critical-section">
@@ -1003,8 +1003,8 @@
 
     <!-- チェックリスト -->
     <div class="content" id="checklist">
-        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 16px; color: #2d3748; text-align: center;">✅ 最終チェックリスト</h2>
-        <p style="text-align: center; color: #718096; margin-bottom: 32px; font-size: 14px;">
+        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 16px; color: #3d3228; text-align: center;">✅ 最終チェックリスト</h2>
+        <p style="text-align: center; color: #8b7b6b; margin-bottom: 32px; font-size: 14px;">
             チェックした内容は自動保存されます。ページを閉じても消えません。
         </p>
         
