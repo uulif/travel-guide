@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌍 ドバイ＆ケニア渡航完全ガイド</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100px);
+            color: #2c3e50;
+            padding-bottom: 120px;
+        }
+
+        /* ヘッダー */
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 24px 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .page-header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .page-header p {
+            font-size: 14px;
+            opacity: 0.95;
+        }
+
+        /* タブ */
+        .tabs {
+            display: flex;
+            position: sticky;
+            top: 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            z-index: 100;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 20px 16px;
+            text-align: center;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s;
+            font-size: 15px;
+            font-weight: 600;
+            color: #666;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .tab:hover {
+            background: #f8f9fa;
+        }
+
+        .tab.active {
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            background: #f8f9ff;
+        }
+
+        .tab-icon {
+            font-size: 20px;
+        }
+
+        /* コンテンツ */
+        .content {
+            display: none;
+            padding: 32px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeIn 0.4s;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* セクション */
+        .section {
+            margin-bottom: 48px;
+        }
+
+        .section.critical-section {
+            background: linear-gradient(to right, #ffebee, #ffffff);
+            padding: 24px;
+            border-radius: 12px;
+            border-left: 4px solid #e53e3e;
+        }
+
+        .section.recommended-section {
+            background: linear-gradient(to right, #e3f2fd, #ffffff);
+            padding: 24px;
+            border-radius: 12px;
+            border-left: 4px solid #2196f3;
+        }
+
+        .section.optional-section {
+            background: linear-gradient(to right, #f1fdf7, #ffffff);
+            padding: 24px;
+            border-radius: 12px;
+            border-left: 4px solid #38a169;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+
+        .section-title::before,
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ddd, transparent);
+        }
+
+        .section-title.critical { color: #e53e3e; }
+        .section-title.recommended { color: #dd6b20; }
+        .section-title.optional { color: #38a169; }
+
+        /* アイテムカード */
+        .item-card {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+
+        .item-card:hover {
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .item-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #2d3748;
+            line-height: 1.4;
+            text-align: center;
+            padding: 20px 20px 16px 20px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .item-details {
+            padding: 20px;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #4a5568;
+        }
+
+        .item-details ul {
+            list-style-position: inside;
+            padding-left: 12px;
+        }
+
+        .item-details li {
+            margin-bottom: 16px;
+            padding-left: 8px;
+        }
+
+        .item-details strong {
+            color: #2d3748;
+            font-weight: 600;
+        }
+
+        .item-details a {
+            color: #667eea;
+            text-decoration: none;
+            border-bottom: 1px solid #667eea;
+        }
+
+        .item-details a:hover {
+            color: #764ba2;
+            border-bottom-color: #764ba2;
+        }
+
+        /* HAKKI AFRICAセクション */
+        .hakki-section {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 32px 24px;
+            border-radius: 16px;
+            margin: 48px 0;
+            box-shadow: 0 8px 24px rgba(245,87,108,0.3);
+        }
+
+        .hakki-section h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hakki-section .item-card {
+            background: rgba(255,255,255,0.95);
+        }
+
+        /* チェックリスト */
+        .checklist {
+            background: #f7fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 32px;
+        }
+
+        .checklist h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #2d3748;
+        }
+
+        .checklist-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .checklist-item:last-child {
+            border-bottom: none;
+        }
+
+        /* チェックボックス付きアイテム */
+        .checkbox-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 15px;
+            line-height: 1.6;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .checkbox-item:last-child {
+            border-bottom: none;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            margin-top: 3px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .checkbox-item label {
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .checkbox-item input[type="checkbox"]:checked + label {
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+
+        /* レスポンシブ */
+        @media (max-width: 600px) {
+            .page-header h1 {
+                font-size: 20px;
+            }
+
+            .tab {
+                font-size: 13px;
+                padding: 16px 12px;
+            }
+
+            .tab-icon {
+                font-size: 18px;
+            }
+
+            .content {
+                padding: 24px 16px;
+            }
+
+            .item-title {
+                font-size: 16px;
+            }
+
+            .item-details {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header">
+        <h1>🌍 渡航完全ガイド</h1>
+        <p>ドバイ経由ケニア｜短期旅行</p>
+    </div>
+
+    <div class="tabs">
+        <div class="tab active" onclick="showTab('pre-departure')">
+            <span class="tab-icon">📋</span>
+            <span>出発前</span>
+        </div>
+        <div class="tab" onclick="showTab('dubai')">
+            <span class="tab-icon">🇦🇪</span>
+            <span>ドバイ</span>
+        </div>
+        <div class="tab" onclick="showTab('kenya')">
+            <span class="tab-icon">🇰🇪</span>
+            <span>ケニア</span>
+        </div>
+        <div class="tab" onclick="showTab('hakki')">
+            <span class="tab-icon">🏢</span>
+            <span>HAKKI</span>
+        </div>
+        <div class="tab" onclick="showTab('checklist')">
+            <span class="tab-icon">✅</span>
+            <span>チェックリスト</span>
+        </div>
+    </div>
+
+    <!-- 出発前 -->
+    <div class="content active" id="pre-departure">
+        <div class="section critical-section">
+            <div class="section-title critical">
+                🔴 重要！必須事項
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 パスポートの残存有効期間確認 】</div>
+                <div class="item-details">
+                    <strong>6ヶ月以上</strong>の残存有効期間が必要です。足りない場合は更新が最優先。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 ケニアのeTA申請 】</div>
+                <div class="item-details">
+                    <ul>
+                        <li>空港での取得は<strong>不可</strong>、事前オンライン申請のみ</li>
+                        <li>申請先（公式のみ）：<a href="https://eta.immigration.go.ke" target="_blank">https://eta.immigration.go.ke</a></li>
+                        <li>費用：<strong>USD 32.50</strong></li>
+                        <li>出発の<strong>最低3日前には申請完了</strong>しておくこと</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 黄熱ワクチン接種＋イエローカード取得 】</div>
+                <div class="item-details">
+                    <ul>
+                        <li>接種後<strong>10日間は有効にならない</strong>ため、出発<strong>3〜4週間前まで</strong>に接種が必要</li>
+                        <li>接種できる医療機関は限られており<strong>事前予約が必須</strong></li>
+                        <li>確認先：<a href="https://www.forth.go.jp" target="_blank">厚生労働省検疫所 FORTH</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 マラリア予防薬の処方 】</div>
+                <div class="item-details">
+                    出発前から飲み始めるタイプが多い。<strong>内科・トラベルクリニックを受診</strong>して医師から処方してもらうこと。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 海外旅行傷害保険に加入 】</div>
+                <div class="item-details">
+                    <ul>
+                        <li><strong>キャッシュレス対応プラン</strong>を選ぶこと</li>
+                        <li><strong>緊急医療搬送（メディカルエバキュエーション）特約付き</strong>を強く推奨</li>
+                        <li>理由：ナイロビ市外では高水準の医療機関が非常に限られているため</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 服薬中の薬がある場合はUAE規制薬物確認 】</div>
+                <div class="item-details">
+                    <ul>
+                        <li>向精神薬・一部の鎮痛剤・睡眠薬などは<strong>持ち込み禁止または事前申請が必要</strong>なケースがある</li>
+                        <li>確認先：<a href="https://www.uae-embassy.ae" target="_blank">UAE駐日大使館</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 ビニール袋・レジ袋をスーツケースに入れない 】</div>
+                <div class="item-details">
+                    ケニアでは所持しているだけで<strong>最高約40万円の罰金または禁固刑</strong>になります。
+                </div>
+            </div>
+        </div>
+
+        <div class="section recommended-section">
+            <div class="section-title recommended">
+                🟡 推奨
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 トラベルクリニックで全ワクチン相談 】</div>
+                <div class="item-details">
+                    A型肝炎・腸チフス・B型肝炎・破傷風など、渡航先に合わせたワクチンを相談してください。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 乗り継ぎ時間が2時間以上あるか確認 】</div>
+                <div class="item-details">
+                    ドバイ国際空港は非常に広大です。<strong>2時間未満は乗り遅れリスクが高い</strong>です。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 スマホのSIMロック解除確認 】</div>
+                <div class="item-details">
+                    ケニアでは現地SIM「<strong>Safaricom</strong>」が最も安定しています。端末がSIMロック解除済みかどうか事前に確認しておきましょう。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 日本でUSD新紙幣に両替 】</div>
+                <div class="item-details">
+                    <ul>
+                        <li><strong>2015年以降発行の新紙幣</strong>を準備すること（古い紙幣は両替を断られることがある）</li>
+                        <li>日本円をケニアで両替するとレートが非常に悪い → <strong>日本で両替しておくこと</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 Type G変換プラグ購入 】</div>
+                <div class="item-details">
+                    ケニアは<strong>イギリス式3ピン・240V</strong>です。日本の機器はそのまま使えないため、変換プラグと電圧対応の確認が必要です。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 エコバッグを複数持参 】</div>
+                <div class="item-details">
+                    ケニアのビニール袋持ち込み禁止に対応するため、エコバッグを複数持っていこう。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 ラマダン期間と渡航時期の確認 】</div>
+                <div class="item-details">
+                    渡航時期がラマダン期間と重なる場合、ドバイでは公共の場での飲食・喫煙が昼間禁止される。事前に確認しておこう。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 バッテリー類は機内持ち込みで 】</div>
+                <div class="item-details">
+                    モバイルバッテリー等は<strong>必ず機内持ち込み手荷物に入れる</strong>こと。預け荷物に入れると没収・トラブルの原因になります。
+                </div>
+            </div>
+        </div>
+
+        <div class="section optional-section">
+            <div class="section-title optional">
+                🟢 任意
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 ドバイでの両替・カード情報 】</div>
+                <div class="item-details">
+                    <ul>
+                        <li>現地空港または市内の両替所の方がレートが良い傾向あり</li>
+                        <li><strong>Visa/Mastercard</strong>はドバイでほぼ全域で使用可能</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 スワヒリ語の基礎表現を学ぶ 】</div>
+                <div class="item-details">
+                    ケニアでの信頼構築に非常に効果的。基本的な挨拶だけでも覚えていくと現地の人との関係が変わる。
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ドバイ -->
+    <div class="content" id="dubai">
+        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 32px; color: #2d3748;">🇦🇪 ドバイ</h2>
+        
+        <!-- 在国中 -->
+        <div style="border-top: 3px solid #667eea; padding-top: 32px; margin-top: 16px; margin-bottom: 32px;">
+            <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 24px; color: #667eea; text-align: center; background: linear-gradient(to right, transparent, #f0f4ff, transparent); padding: 12px 0;">📍 在国中</h3>
+        </div>
+        
+        <div class="section critical-section">
+            <div class="section-title critical">
+                🔴 重要！必須事項
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 公共の場での飲酒・酩酊は違法 】</div>
+                <div class="item-details">
+                    罰金<strong>500〜1,000AED（約2〜4万円）</strong>、逮捕もあり得ます。ホテル・バー内のみOKです。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 他人を無許可で撮影しない 】</div>
+                <div class="item-details">
+                    特に女性・モスク・軍施設の撮影は絶対NG。逮捕事例あり。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 政府・王室・宗教への批判的なSNS投稿は違法 】</div>
+                <div class="item-details">
+                    <strong>日本語でも対象になり得る。</strong>逮捕事例あり。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 公共での過度な接触は違法 】</div>
+                <div class="item-details">
+                    異性間も含む公共の場での過度な接触（キス・抱擁など）は違法。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 怒りや不満を公の場で激しく表現しない 】</div>
+                <div class="item-details">
+                    侮辱罪・不敬罪として検挙されることがある。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 ラマダン期間中は公共での飲食・喫煙が昼間禁止 】</div>
+                <div class="item-details">
+                    渡航時期がラマダンと重なる場合は特に注意が必要です。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 地下鉄内での飲食は法律違反 】</div>
+                <div class="item-details">
+                    罰金対象となります。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 タクシーはCareem/Uberのみ使用 】</div>
+                <div class="item-details">
+                    路上タクシーは料金トラブルのリスクあり。正規アプリ「<strong>Careem</strong>」または「<strong>Uber</strong>」を使うこと。
+                </div>
+            </div>
+        </div>
+
+        <div class="section recommended-section">
+            <div class="section-title recommended">
+                🟡 推奨
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 肌の露出が多い服装は避ける 】</div>
+                <div class="item-details">
+                    警告・施設からの退場になることがある。ただし<strong>男性なら観光エリアでは短パン・Tシャツはほぼ問題ない。</strong>宗教施設・モスク付近は別。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 気温45度超えに注意 】</div>
+                <div class="item-details">
+                    月によっては気温が45度を超えることがある。こまめな水分補給と、日中の屋外活動を最小限に。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 乗り継ぎ便のゲート確認 】</div>
+                <div class="item-details">
+                    ドバイ空港は広大なので、ケニア行き乗り継ぎ便のゲートの場所を早めに確認・移動すること。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 UAE時間に注意 】</div>
+                <div class="item-details">
+                    UAE時間は<strong>日本より-5時間</strong>。うっかり日本時間で行動しないように注意。
+                </div>
+            </div>
+        </div>
+
+        <div class="section optional-section">
+            <div class="section-title optional">
+                🟢 任意
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 土産物店での価格交渉 】</div>
+                <div class="item-details">
+                    価格交渉は一般的です。無理な勧誘は断って問題ありません。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 観光地での接触に注意 】</div>
+                <div class="item-details">
+                    観光地周辺での「無料案内」「写真を一緒に」系の接触には注意。
+                </div>
+            </div>
+        </div>
+
+        <!-- 出国前 -->
+        <div style="border-top: 3px solid #f56565; border-bottom: 3px solid #f56565; padding: 32px 0; margin: 64px 0 32px 0;">
+            <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 24px; color: #f56565; text-align: center; background: linear-gradient(to right, transparent, #fff5f5, transparent); padding: 12px 0;">✈️ 出国前</h3>
+        </div>
+        
+        <div class="section critical-section">
+            <div class="section-title critical">
+                🔴 重要！必須事項
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 ケニア行き搭乗ゲートを早めに確認・移動 】</div>
+                <div class="item-details">
+                    ドバイ空港は非常に広いため、移動に時間がかかる。早めに確認・移動すること。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 乗り継ぎ便の搭乗券を1便目でまとめて受け取る 】</div>
+                <div class="item-details">
+                    1便目のチェックイン時に乗り継ぎ便の搭乗券もまとめて受け取っておくとスムーズです。
+                </div>
+            </div>
+        </div>
+
+        <div class="section recommended-section">
+            <div class="section-title recommended">
+                🟡 推奨
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 UAEからの持ち出し制限品に注意 】</div>
+                <div class="item-details">
+                    豚肉製品・アルコール（未開封でも規制あり）・特定の医薬品はUAEからの持ち出し時も注意が必要です。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 免税店購入品は預け荷物に 】</div>
+                <div class="item-details">
+                    免税店で購入したアルコール類は<strong>機内預け荷物に入れる</strong>こと（液体は機内持ち込み不可）。
+                </div>
+            </div>
+        </div>
+
+        <div class="section optional-section">
+            <div class="section-title optional">
+                🟢 任意
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 日本帰国時の免税範囲 】</div>
+                <div class="item-details">
+                    <ul>
+                        <li>酒類：1リットル</li>
+                        <li>たばこ：200本</li>
+                        <li>その他：合計20万円以下</li>
+                    </ul>
+                    超える場合は申告が必要です。
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ケニア -->
+    <div class="content" id="kenya">
+        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 32px; color: #2d3748;">🇰🇪 ケニア</h2>
+        
+        <!-- 在国中 -->
+        <div style="border-top: 3px solid #667eea; padding-top: 32px; margin-top: 16px; margin-bottom: 32px;">
+            <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 24px; color: #667eea; text-align: center; background: linear-gradient(to right, transparent, #f0f4ff, transparent); padding: 12px 0;">📍 在国中</h3>
+        </div>
+        
+        <div class="section critical-section">
+            <div class="section-title critical">
+                🔴 重要！必須事項
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 夜間・早朝の一人歩きは絶対NG 】</div>
+                <div class="item-details">
+                    路上強盗が多発しており、日本人被害事例もある。夜間・早朝の一人歩きは絶対に避けること。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 タクシーはUber/Boltのみ 】</div>
+                <div class="item-details">
+                    流しのタクシーは使わないこと。正規アプリ「<strong>Uber</strong>」または「<strong>Bolt</strong>」を使用。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 スマホ・カメラを路上で出しながら歩かない 】</div>
+                <div class="item-details">
+                    <strong>バイク集団によるひったくり</strong>が多発している。スマートフォン・カメラを路上で出しながら歩くことは絶対に避けること。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 水道水は飲まない・氷・生野菜も口にしない 】</div>
+                <div class="item-details">
+                    <strong>未開封のミネラルウォーターのみ</strong>飲むこと。氷・生野菜も水道水が使われている可能性があるため避けること。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 虫除けはDEET20〜30%以上 】</div>
+                <div class="item-details">
+                    <strong>DEET濃度20〜30%以上</strong>の製品を使用すること。日本の市販品は多くが10%以下で効果不十分。
+                </div>
+            </div>
+        </div>
+
+        <div class="section recommended-section">
+            <div class="section-title recommended">
+                🟡 推奨
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 比較的安全なエリアを拠点にする 】</div>
+                <div class="item-details">
+                    <strong>ウエストランズ、カレン、ムトハイガ地区</strong>が比較的安全とされている。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 特に注意が必要なエリアを避ける 】</div>
+                <div class="item-details">
+                    <strong>マチャコスロード周辺、スラム地域</strong>は危険度2〜3に指定されている。近づかないこと。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 財布は分散して持つ 】</div>
+                <div class="item-details">
+                    全財産を一箇所にまとめないこと。分散して持つことでリスクを減らせる。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 外出時は貴重品を最小限に 】</div>
+                <div class="item-details">
+                    必要最小限の現金とカードだけを持ち歩くこと。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 病院はインターナショナル病院を使用 】</div>
+                <div class="item-details">
+                    ナイロビの<strong>インターナショナル病院</strong>を使うこと。高額だが信頼できる。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 写真を撮る前に許可を取る 】</div>
+                <div class="item-details">
+                    写真を撮る前に必ず相手の許可を取ること。特にマサイ族などの人々を無断撮影しないこと。
+                </div>
+            </div>
+        </div>
+
+        <div class="section optional-section">
+            <div class="section-title optional">
+                🟢 任意
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 現地SIM（Safaricom）を購入 】</div>
+                <div class="item-details">
+                    現地SIM「Safaricom」を購入しておくと安定した通信が可能です。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 現地の人との会話でニーズを確認 】</div>
+                <div class="item-details">
+                    HAKKI AFRICAへの就職を考えているなら、現地でのドライバーや地域の人との会話でニーズのズレを自分の目で確認しておくと良い。
+                </div>
+            </div>
+        </div>
+
+        <!-- 出国前 -->
+        <div style="border-top: 3px solid #f56565; border-bottom: 3px solid #f56565; padding: 32px 0; margin: 64px 0 32px 0;">
+            <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 24px; color: #f56565; text-align: center; background: linear-gradient(to right, transparent, #fff5f5, transparent); padding: 12px 0;">✈️ 出国前</h3>
+        </div>
+        
+        <div class="section critical-section">
+            <div class="section-title critical">
+                🔴 重要！必須事項
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 象牙・野生動物製品は買わない・持ち込まない 】</div>
+                <div class="item-details">
+                    象牙・毛皮・野生動物製品（皮革・剥製など）は<strong>日本への持ち込み禁止</strong>（ワシントン条約）です。土産として売られていても購入・持ち込みは違法になります。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 動植物の持ち出し制限 】</div>
+                <div class="item-details">
+                    動植物の持ち出しはケニア法律でも制限があります（種・植物なども要注意）。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 帰国後1〜4週間は発熱に注意 】</div>
+                <div class="item-details">
+                    <strong>マラリアは帰国後1〜4週間で発症</strong>することがある。発熱時は必ず渡航歴を医師に伝えること。伝えないと診断が遅れ重症化するリスクあり。
+                </div>
+            </div>
+        </div>
+
+        <div class="section recommended-section">
+            <div class="section-title recommended">
+                🟡 推奨
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 健康状態申告書の準備 】</div>
+                <div class="item-details">
+                    日本入国時に<strong>健康状態申告書の提出</strong>が求められる場合がある。準備しておくこと。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 お土産の総額確認 】</div>
+                <div class="item-details">
+                    お土産の総額が<strong>20万円を超える場合は日本税関への申告が必要</strong>です。
+                </div>
+            </div>
+        </div>
+
+        <div class="section optional-section">
+            <div class="section-title optional">
+                🟢 任意
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 ケニア入国時の持ち込み物品確認 】</div>
+                <div class="item-details">
+                    ケニア入国時に500ドル以上の物品を持ち込んでいた場合、出国時の荷物確認に注意。
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HAKKI AFRICA -->
+    <div class="content" id="hakki">
+        <div class="hakki-section">
+            <h2>🏢 HAKKI AFRICAで働くことを考えているなら</h2>
+            <p style="margin-bottom: 24px; line-height: 1.7; font-size: 15px;">
+                「事務仕事じゃなく意味あることがしたい」と考えているなら、渡航前と現地で以下のことを確認・実行すること。
+            </p>
+
+            <div class="item-card">
+                <div class="item-title">【 渡航前：会社に直接コンタクトする 】</div>
+                <div class="item-details">
+                    <strong>具体的にやること：</strong>
+                    <ul>
+                        <li>HAKKI AFRICAの採用担当者にメールまたはLinkedInでメッセージを送る</li>
+                        <li>内容：「〇月に個人でケニアに行く予定です。御社のオフィス訪問と事業説明を受けることは可能でしょうか？」</li>
+                        <li>就労ビザ（労働許可証）のサポート体制について事前に質問する</li>
+                        <li>「現地でタクシードライバーと話す機会を作っていただけますか？」と依頼</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 現地でやること①：オフィスで具体的な業務内容を聞く 】</div>
+                <div class="item-details">
+                    <strong>必ず確認すること：</strong>
+                    <ul>
+                        <li>「入社1年目の日本人スタッフは1日どんなスケジュールで何をしていますか？」</li>
+                        <li>「フィールドワーク（現場に出る仕事）と事務作業の比率は？」</li>
+                        <li>「実際にドライバーと接する頻度はどのくらいですか？」</li>
+                        <li>「現地採用のケニア人スタッフと日本人スタッフの役割分担は？」</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 現地でやること②：会社を通してドライバーと話す機会を作る 】</div>
+                <div class="item-details">
+                    <strong>安全に確認する方法：</strong>
+                    <ul>
+                        <li>「実際に融資を受けているドライバーと話す機会を作っていただけますか？」と会社に依頼</li>
+                        <li>会社のスタッフ同席でも構わないので、ドライバーの生の声を聞かせてもらう</li>
+                        <li>「このサービスのどこが助かっていますか？」「改善してほしい点はありますか？」と質問</li>
+                        <li>ドライバーの表情や話し方から「本当に満足しているか」を観察する</li>
+                    </ul>
+                    <strong>⚠️ 注意：</strong> 個人で知らないドライバーに話しかけるのは治安上危険です。必ず会社を通して安全な環境で話を聞くこと。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 現地でやること③：ナイロビの環境を安全に確認する 】</div>
+                <div class="item-details">
+                    <strong>安全に行動すること：</strong>
+                    <ul>
+                        <li><strong>昼間に</strong>安全なエリア（ウエストランズ、カレン等）を歩いて雰囲気を確認</li>
+                        <li>Uber/Boltで移動しながら街の様子を観察（決して一人で徒歩で遠出しない）</li>
+                        <li>「自分がここで毎日働けるか？」を想像してみる</li>
+                        <li>可能なら会社スタッフに同行してもらい、オフィス周辺や生活エリアを案内してもらう</li>
+                    </ul>
+                    <strong>⚠️ 絶対にやってはいけないこと：</strong>
+                    <ul>
+                        <li>夜間・早朝の外出</li>
+                        <li>一人で知らない場所を歩き回る</li>
+                        <li>スマホを出しながら歩く</li>
+                        <li>危険エリア（スラム街・マチャコスロード周辺）に近づく</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 帰国後にやること：数字で判断する 】</div>
+                <div class="item-details">
+                    <strong>必ず確認する具体的な数字：</strong>
+                    <ul>
+                        <li><strong>給与：</strong> 月給いくらか？（USD/KES） 日本円でいくらになるか？</li>
+                        <li><strong>住居費：</strong> 会社負担か自己負担か？ナイロビの家賃相場は？</li>
+                        <li><strong>生活費：</strong> 月に最低いくら必要か？（食費・交通費・通信費）</li>
+                        <li><strong>契約期間：</strong> 最低何年働く必要があるか？途中退職は可能か？</li>
+                        <li><strong>帰国後のキャリア：</strong> 日本に戻った時、この経験は何に活きるか？</li>
+                    </ul>
+                    <strong>判断基準：</strong> 「意味のある仕事」と「生活できる収入」の両方が成立するかを冷静に見極める。
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 労働許可証（Work Permit）について 】</div>
+                <div class="item-details">
+                    <strong>知っておくべきこと：</strong>
+                    <ul>
+                        <li>ケニアで正式に働くには<strong>労働許可証が必須</strong></li>
+                        <li>申請から取得まで<strong>数ヶ月かかる</strong></li>
+                        <li>申請費用は高額（会社負担か自己負担かを確認）</li>
+                        <li>許可が出るまでは「スペシャルパス」で対応する場合がある</li>
+                        <li><strong>会社がサポートしてくれるかを必ず事前確認</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 今からやっておくと強いこと 】</div>
+                <div class="item-details">
+                    <strong>渡航前に準備できること：</strong>
+                    <ul>
+                        <li><strong>英語の日常会話力を上げる：</strong> ドライバーやスタッフと話せないと仕事にならない</li>
+                        <li><strong>スワヒリ語の基礎挨拶を覚える：</strong> 「Jambo（こんにちは）」「Asante（ありがとう）」だけでも信頼が変わる</li>
+                        <li><strong>Excel/Googleスプレッドシートの基礎：</strong> データ管理・分析は必須スキル</li>
+                        <li><strong>金融・ファイナンスの基礎知識：</strong> マイクロローンの仕組みを理解しておく</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-title">【 現実的に考えるべきこと 】</div>
+                <div class="item-details">
+                    <strong>理想と現実のギャップ：</strong>
+                    <ul>
+                        <li>「現場でドライバーと関わる仕事」だが、実際は<strong>事務作業・データ入力・報告書作成が大半</strong>になる可能性が高い</li>
+                        <li>「意味のある仕事」に見えても、実際は<strong>日本人スタッフは調整役</strong>で、現場の主役はケニア人スタッフかもしれない</li>
+                        <li>「やりがい」と「給料・生活の安定」は別問題。<strong>両方成立しないと続かない</strong></li>
+                        <li>日本に帰国した時、<strong>「ケニアで働いた経験」が次の仕事に繋がるか</strong>を考える</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- チェックリスト -->
+    <div class="content" id="checklist">
+        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 16px; color: #2d3748; text-align: center;">✅ 最終チェックリスト</h2>
+        <p style="text-align: center; color: #718096; margin-bottom: 32px; font-size: 14px;">
+            チェックした内容は自動保存されます。ページを閉じても消えません。
+        </p>
+        
+        <div class="checklist">
+            <h3>📋 出発前（日本にいる間）</h3>
+            
+            <div class="checkbox-item">
+                <input type="checkbox" id="check1">
+                <label for="check1">パスポート残存有効期間6ヶ月以上</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check2">
+                <label for="check2">服薬中の薬がUAE規制薬物に該当しないか確認</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check3">
+                <label for="check3">海外旅行保険（キャッシュレス対応・メディカルエバキュエーション付き）</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check4">
+                <label for="check4">ケニアeTA申請（出発3日前までに・公式サイトのみ）</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check5">
+                <label for="check5">トラベルクリニックへ（黄熱ワクチンは出発3〜4週間前に必要）</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check6">
+                <label for="check6">マラリア予防薬を医師から処方してもらう</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check7">
+                <label for="check7">スマホのSIMロック解除確認</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check8">
+                <label for="check8">日本でUSD新紙幣に両替しておく</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check9">
+                <label for="check9">Type G変換プラグを購入</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check10">
+                <label for="check10">エコバッグを複数持参（ビニール袋持ち込み禁止）</label>
+            </div>
+        </div>
+
+        <div class="checklist" style="margin-top: 32px;">
+            <h3>🇦🇪 ドバイ（乗り継ぎ中）</h3>
+            
+            <div class="checkbox-item">
+                <input type="checkbox" id="check11">
+                <label for="check11">公共の場での飲酒・撮影・過度な接触・SNS投稿に注意</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check12">
+                <label for="check12">ラマダン期間中は公共での飲食・喫煙NG</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check13">
+                <label for="check13">タクシーはCareem/Uberのみ</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check14">
+                <label for="check14">ケニア行き搭乗ゲートを早めに確認</label>
+            </div>
+        </div>
+
+        <div class="checklist" style="margin-top: 32px;">
+            <h3>🇰🇪 ケニア（滞在中）</h3>
+            
+            <div class="checkbox-item">
+                <input type="checkbox" id="check15">
+                <label for="check15">夜間の一人歩きは絶対しない</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check16">
+                <label for="check16">タクシーはUber/Boltのみ</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check17">
+                <label for="check17">スマホを路上で出さない</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check18">
+                <label for="check18">水道水・氷・生野菜は口にしない</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check19">
+                <label for="check19">DEET20〜30%以上の虫除けを使う</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check20">
+                <label for="check20">安全エリア（ウエストランズ・カレン・ムトハイガ）を拠点にする</label>
+            </div>
+        </div>
+
+        <div class="checklist" style="margin-top: 32px;">
+            <h3>✈️ 帰国前・帰国後</h3>
+            
+            <div class="checkbox-item">
+                <input type="checkbox" id="check21">
+                <label for="check21">象牙・野生動物製品は買わない・持ち込まない</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check22">
+                <label for="check22">健康状態申告書の準備</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check23">
+                <label for="check23">帰国後1〜4週間は発熱に注意、発熱時は渡航歴を必ず医師へ伝える</label>
+            </div>
+        </div>
+
+        <div class="checklist" style="margin-top: 32px;">
+            <h3>🏢 HAKKI AFRICAを考えているなら</h3>
+            
+            <div class="checkbox-item">
+                <input type="checkbox" id="check24">
+                <label for="check24">渡航前に公式コンタクト（採用担当へメール/LinkedIn）</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check25">
+                <label for="check25">現地での「実際の業務内容」を具体的に確認（1日のスケジュールを聞く）</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check26">
+                <label for="check26">労働許可証サポートの有無を確認</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check27">
+                <label for="check27">給与水準・住居費・生活費を数字で確認</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check28">
+                <label for="check28">会社を通してドライバーと話す機会を作ってもらう（個人で話しかけるのは危険）</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="check29">
+                <label for="check29">帰国後のキャリアを具体的に想像する</label>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            // スクロールをトップに
+            window.scrollTo({top: 0, behavior: 'smooth'});
+            
+            // タブの切り替え
+            const tabs = document.querySelectorAll('.tab');
+            const contents = document.querySelectorAll('.content');
+            
+            tabs.forEach(tab => tab.classList.remove('active'));
+            contents.forEach(content => content.classList.remove('active'));
+            
+            event.target.closest('.tab').classList.add('active');
+            document.getElementById(tabName).classList.add('active');
+        }
+
+        // チェックボックスの状態を保存・復元
+        document.addEventListener('DOMContentLoaded', function() {
+            // ページ読み込み時に保存された状態を復元
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                const savedState = localStorage.getItem(checkbox.id);
+                if (savedState === 'true') {
+                    checkbox.checked = true;
+                }
+                
+                // チェック状態が変わったら保存
+                checkbox.addEventListener('change', function() {
+                    localStorage.setItem(this.id, this.checked);
+                });
+            });
+        });
+
+        // リセットボタン機能（必要なら使える）
+        function resetChecklist() {
+            if (confirm('チェックリストをすべてリセットしますか？')) {
+                const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(checkbox => {
+                    checkbox.checked = false;
+                    localStorage.removeItem(checkbox.id);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
